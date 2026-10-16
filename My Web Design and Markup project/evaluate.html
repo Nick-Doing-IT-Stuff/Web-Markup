@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03. Evaluate Output — AI for Better Learning</title>
+    <meta
+      name="description"
+      content="Learn how to critically evaluate AI-generated answers, check sources, and detect statistical manipulations."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Skip link for WCAG Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Main Navigation">
+        <p class="logo-title">
+          <a href="index.html">AI for Better Learning</a>
+        </p>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="understand.html">01. Understand Task</a></li>
+          <li><a href="prompts.html">02. Write Prompts</a></li>
+          <li>
+            <a href="evaluate.html" class="active" aria-current="page"
+              >03. Evaluate Output</a
+            >
+          </li>
+          <li><a href="make-it-yours.html">04. Make It Yours</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+              <!-- Main Content -->
+              <main id="main-content" class="evaluate-page">
+                <!-- Hero Header -->
+                <section class="hero-step">
+                  <p class="step-tag">STEP 03</p>
+                  <h1>Evaluate AI Output</h1>
+                  <p class="hero-lead">
+                    Confident doesn't mean correct. Always check before you
+                    trust it.
+                  </p>
+                </section>
+
+                <!-- Interactive AI Sample Section (Pure CSS Toggle for 3 Claims) -->
+                <section class="eval-sample-section">
+                  <article class="eval-card">
+                    <header class="eval-card-header">
+                      <span class="badge-icon">🤖</span>
+                      <p class="eval-card-subtitle">
+                        AI-Generated Answer Sample
+                        <small>(click underlined text to inspect claims)</small>
+                      </p>
+                    </header>
+
+                    <!-- Hidden CSS Radio Inputs -->
+                    <input
+                      type="radio"
+                      name="claim_toggle"
+                      id="toggle-none"
+                      class="css-toggle-radio"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="claim_toggle"
+                      id="toggle-claim-1"
+                      class="css-toggle-radio"
+                    />
+                    <input
+                      type="radio"
+                      name="claim_toggle"
+                      id="toggle-claim-2"
+                      class="css-toggle-radio"
+                    />
+                    <input
+                      type="radio"
+                      name="claim_toggle"
+                      id="toggle-claim-3"
+                      class="css-toggle-radio"
+                    />
+
+                    <blockquote class="ai-response-text">
+                      "Regular physical activity can improve memory and
+                      concentration.
+
+                      <!-- Claim 1 -->
+                      <label for="toggle-claim-1" class="hl-clickable-text"
+                        >A 2023 study</label
+                      >
+
+                      found that students who exercise regularly performed
+
+                      <!-- Claim 2 -->
+                      <label for="toggle-claim-2" class="hl-clickable-text"
+                        >40% better</label
+                      >
+
+                      on memory tests. Recent studies also suggest that exercise
+                      increases neurogenesis in the brain, which
+
+                      <!-- Claim 3 -->
+                      <label for="toggle-claim-3" class="hl-clickable-text"
+                        >may lead to better academic performance.</label
+                      >"
+                    </blockquote>
+
+                    <!-- Dynamic Doubt Windows -->
+                    <div class="doubt-window doubt-window-1">
+                      <span class="doubt-icon" aria-hidden="true">❓</span>
+                      <p class="doubt-content">
+                        <strong>Which 2023 study?</strong> Can you find the
+                        original study, dataset, or peer-reviewed publication
+                        behind this claim?
+                      </p>
+                      <label
+                        for="toggle-none"
+                        class="close-doubt-btn"
+                        title="Close inspector"
+                        >&times;</label
+                      >
+                    </div>
+
+                    <div class="doubt-window doubt-window-2">
+                      <span class="doubt-icon" aria-hidden="true">❓</span>
+                      <p class="doubt-content">
+                        <strong>Where does this 40% number come from?</strong>
+                        Isn't this a statistics manipulation or an exaggerated
+                        summary?
+                      </p>
+                      <label
+                        for="toggle-none"
+                        class="close-doubt-btn"
+                        title="Close inspector"
+                        >&times;</label
+                      >
+                    </div>
+
+                    <div class="doubt-window doubt-window-3">
+                      <span class="doubt-icon" aria-hidden="true">❓</span>
+                      <p class="doubt-content">
+                        <strong>Is this an oversimplification?</strong>
+                        Correlation does not equal causation. How strong is this
+                        link in reality?
+                      </p>
+                      <label
+                        for="toggle-none"
+                        class="close-doubt-btn"
+                        title="Close inspector"
+                        >&times;</label
+                      >
+                    </div>
+                  </article>
+                </section>
+
+                <!-- Questions to Ask Grid -->
+                <section class="questions-section">
+                  <h2>Questions to Ask</h2>
+
+                  <div class="questions-grid">
+                    <article class="q-card">
+                      <h3>1. WHERE IS IT FROM?</h3>
+                      <p>
+                        Check the source. Can you find the original study,
+                        dataset, or source behind the claim?
+                      </p>
+                    </article>
+
+                    <article class="q-card">
+                      <h3>2. DOES IT MAKE SENSE?</h3>
+                      <p>
+                        Check the logic. Does the evidence actually support the
+                        final conclusion?
+                      </p>
+                    </article>
+
+                    <article class="q-card">
+                      <h3>3. WHAT FEELS OFF?</h3>
+                      <p>
+                        Look closer. Are there missing details, absolute claims,
+                        strange numbers, or confident statements without
+                        evidence?
+                      </p>
+                    </article>
+                  </div>
+                </section>
+
+                <!-- Think Before You Regenerate Section -->
+                <section class="think-section">
+                  <header class="think-header">
+                    <span class="sprout-icon">🌱</span>
+                    <h2>Think Before You Regenerate</h2>
+                    <p class="think-lead">
+                      Not every problem needs another AI request. If you already
+                      have enough information, take a moment to think, check,
+                      and work with what you have.
+                    </p>
+                  </header>
+
+                  <!-- Symmetric Grid with Precise Directional Arrows -->
+                  <div class="bear-in-mind-wrapper">
+                    <h3 class="bear-title">ALSO BEAR IN MIND</h3>
+
+                    <div class="bear-arrows-container" aria-hidden="true">
+                      <div class="arrow-col left-arrow">↙</div>
+                      <div class="arrow-col center-arrow">↓</div>
+                      <div class="arrow-col right-arrow">↘</div>
+                    </div>
+
+                    <div class="bear-grid">
+                      <article class="bear-card">
+                        <h4>🔒 Protect your data</h4>
+                        <p>
+                          Don't share personal, sensitive, or confidential
+                          information with AI unless you really need to.
+                        </p>
+                      </article>
+
+                      <article class="bear-card">
+                        <h4>🧠 BE RESPONSIBLE</h4>
+                        <p>
+                          You own the result. AI can help you learn and work,
+                          but you are responsible for what you submit.
+                        </p>
+                      </article>
+
+                      <article class="bear-card">
+                        <h4>⚡ CLEAN ENERGY</h4>
+                        <p>
+                          Every request requires electricity and computing
+                          resources. Think before you regenerate.
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="cta-next-step">
+                  <p class="cta-subtext">
+                    You checked the answer. You thought before you regenerated.
+                  </p>
+                  <p class="cta-heading-sub">So, what do you do with it now?</p>
+                  <p class="cta-action">
+                    <a href="make-it-yours.html" class="btn-hero"
+                      >MAKE IT YOURS &rarr;</a
+                    >
+                  </p>
+                </section>
+              </main>
+
+              <!-- Footer -->
+              <footer class="site-footer">
+                <p>
+                  &copy; 2026 AI for Better Learning Project. All rights
+                  reserved.
+                </p>
+              </footer>
+            </body>
+          </html>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

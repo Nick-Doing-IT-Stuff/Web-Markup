@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02. Write Prompts — AI for Better Learning</title>
+    <meta
+      name="description"
+      content="Learn how to construct structured and effective AI prompts with clear context, task, format, and requirements."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Main Navigation">
+        <p class="logo-title">
+          <a href="index.html">AI for Better Learning</a>
+        </p>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="understand.html">01. Understand Task</a></li>
+          <li>
+            <a href="prompts.html" class="active" aria-current="page"
+              >02. Write Prompts</a
+            >
+          </li>
+          <li><a href="evaluate.html">03. Evaluate Output</a></li>
+          <li><a href="make-it-yours.html">04. Make It Yours</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="prompts-page">
+      <!-- Page Hero Header -->
+      <section class="hero-step">
+        <p class="step-tag">STEP 02</p>
+        <h1>Writing Better Prompts</h1>
+        <p class="hero-lead">
+          The clearer the request, the less AI has to guess.
+        </p>
+      </section>
+
+      <!-- Prompts Comparison Section (Chat Window Style) -->
+      <section class="prompts-comparison">
+        <!-- Weak Prompt Window -->
+        <article class="prompt-box box-weak">
+          <header class="box-tag-header">
+            <span class="badge badge-bad">🚫 Weak prompt example</span>
+          </header>
+
+          <div class="ai-input-window">
+            <p class="prompt-text-weak">&gt; "Write about ecology."</p>
+            <div class="window-toolbar">
+              <div class="toolbar-icons" aria-hidden="true">
+                <span>🖼️</span>
+                <span>&lt;&gt;</span>
+                <span>🎙️</span>
+              </div>
+              <span class="send-btn" aria-label="Send prompt">↑</span>
+            </div>
+          </div>
+
+          <p class="prompt-explanation">
+            <strong>Too vague:</strong> AI doesn't know what you need, who it's
+            for, or how the answer should look.
+          </p>
+        </article>
+
+        <!-- Structured Prompt Window -->
+        <article class="prompt-box box-structured">
+          <header class="box-tag-header">
+            <span class="badge badge-good"
+              >✅ Structured prompt example (and how to build one)</span
+            >
+          </header>
+
+          <div class="ai-input-window active-window">
+            <p class="prompt-text-structured">
+              &gt; "<mark class="hl-green"
+                >I am an environmental science student.</mark
+              >
+              <mark class="hl-blue"
+                >Explain the main causes of ocean pollution</mark
+              >
+              in <mark class="hl-purple">5 short bullet points</mark> using
+              <mark class="hl-orange">statistics from recent years</mark>."
+            </p>
+            <div class="window-toolbar">
+              <div class="toolbar-icons" aria-hidden="true">
+                <span>🖼️</span>
+                <span>&lt;&gt;</span>
+                <span>🎙️</span>
+              </div>
+              <span class="send-btn send-btn-active" aria-label="Send prompt"
+                >↑</span
+              >
+            </div>
+          </div>
+
+          <p class="prompt-explanation">
+            <strong>To the point:</strong> AI knows background and depth level,
+            what your need is, how the answer should look, and specific
+            expectations.
+          </p>
+        </article>
+      </section>
+
+      <!-- Structure Breakdown Section -->
+      <section class="structure-section">
+        <!-- Centered Arrow & Header -->
+        <header class="structure-header">
+          <span class="down-arrow" aria-hidden="true">&darr;</span>
+          <h2>Structure of a Strong Prompt</h2>
+        </header>
+
+        <!-- Clean 2x2 Grid Layout -->
+        <div class="structure-grid">
+          <!-- Context -->
+          <article class="structure-card">
+            <header class="card-header">
+              <span class="dot dot-green" aria-hidden="true"></span>
+              <h3>CONTEXT</h3>
+            </header>
+            <blockquote class="sample-quote">
+              "I am an environmental science student"
+            </blockquote>
+            <p class="card-description">
+              <strong>Your background or story</strong> &rarr; tells AI who you
+              are and sets the depth level.
+            </p>
+          </article>
+
+          <!-- Task -->
+          <article class="structure-card">
+            <header class="card-header">
+              <span class="dot dot-blue" aria-hidden="true"></span>
+              <h3>TASK</h3>
+            </header>
+            <blockquote class="sample-quote">
+              "Explain the main causes of..."
+            </blockquote>
+            <p class="card-description">
+              <strong>The core job</strong> &rarr; basically the same from what
+              you read in your assignment guidelines.
+            </p>
+          </article>
+
+          <!-- Format -->
+          <article class="structure-card">
+            <header class="card-header">
+              <span class="dot dot-purple" aria-hidden="true"></span>
+              <h3>FORMAT</h3>
+            </header>
+            <blockquote class="sample-quote">
+              "in 5 short bullet points"
+            </blockquote>
+            <p class="card-description">
+              <strong>The visual look</strong> &rarr; how the answer should be
+              structured (bullets, essay, table, etc.).
+            </p>
+          </article>
+
+          <!-- Requirement -->
+          <article class="structure-card">
+            <header class="card-header">
+              <span class="dot dot-orange" aria-hidden="true"></span>
+              <h3>REQUIREMENT</h3>
+            </header>
+            <blockquote class="sample-quote">
+              "using statistics from..."
+            </blockquote>
+            <p class="card-description">
+              <strong>Specific expectations</strong> &rarr; raw ideas or
+              constraints you want AI to consider.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA Next Step Section -->
+      <section class="cta-next-step">
+        <p class="cta-subtext">
+          You asked. AI answered. Can you trust the answer?
+        </p>
+        <p class="cta-action">
+          <a href="evaluate.html" class="btn-hero">EVALUATE OUTPUT &rarr;</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2026 AI for Better Learning Project. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
