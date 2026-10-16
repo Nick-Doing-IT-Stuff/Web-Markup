@@ -6,14 +6,15 @@
     <title>01. Understand Task — AI for Better Learning</title>
     <meta
       name="description"
-      content="Learn how to break down assignment requirements before prompting AI assistants."
+      content="Break down your school or university assignment before asking AI for help."
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
+    <!-- Header and navigation -->
     <header class="site-header">
       <nav class="main-nav" aria-label="Main Navigation">
         <p class="logo-title">
@@ -34,95 +35,140 @@
       </nav>
     </header>
 
-    <main id="main-content">
-      <!-- Page hero section -->
+    <!-- Main content -->
+    <main id="main-content" class="understand-page">
+      <!-- Hero header -->
       <section class="hero-step">
-        <p class="step-tag">STEP 01 / UNDERSTAND TASK</p>
-        <h1>Before You Ask AI, Know What You Need</h1>
+        <p class="step-tag">STEP 01</p>
+        <h1>Understand the Task</h1>
         <p class="hero-lead">
-          AI cannot help you properly if you don't understand the task yourself
-          first.
+          Before asking AI for help, use your brain to break down what you
+          actually need to do.
         </p>
       </section>
 
-      <!-- Concept and principles layout grid -->
-      <section class="step-content-grid">
-        <!-- Task breakdown -->
-        <article class="concept-card">
-          <h2>Break Down Your Assignment</h2>
-          <p class="card-intro">
-            Before opening any AI tool, spend 2 minutes answering four core
-            questions:
-          </p>
+      <!-- Breakdown in 5 steps -->
+      <section class="method-section">
+        <h2>Let's break it down in 5 easy steps:</h2>
 
-          <ol class="breakdown-list">
-            <li>
-              <strong>Goal:</strong> What is the final deliverable? (e.g.,
-              essay, code review, summary)
-            </li>
-            <li>
-              <strong>Scope:</strong> What specific topics should be covered or
-              excluded?
-            </li>
-            <li>
-              <strong>Format:</strong> How should the output be structured?
-              (e.g., bullet points, academic paragraphs)
-            </li>
-            <li>
-              <strong>Constraints:</strong> What are the word limits, required
-              citations, or guidelines?
-            </li>
-          </ol>
-        </article>
+        <ol class="steps-cascade">
+          <li class="step-item step-1">
+            <span class="step-num">1.</span> What do I need to deliver?
+          </li>
+          <li class="step-item step-2">
+            <span class="step-num">2.</span> What is the topic of my assignment?
+          </li>
+          <li class="step-item step-3">
+            <span class="step-num">3.</span> What are the key requirements?
+          </li>
+          <li class="step-item step-4">
+            <span class="step-num">4.</span> Who is it for?
+          </li>
+          <li class="step-item step-5">
+            <span class="step-num">5.</span> What can AI actually help me with?
+          </li>
+        </ol>
+      </section>
 
-        <!-- Approach comparison -->
-        <article class="comparison-card">
-          <h2>Compare the Approach</h2>
-
-          <div class="comparison-box box-bad">
-            <header class="box-header">
-              <span class="badge badge-bad">🚫 Bad Approach</span>
-            </header>
-
-            <blockquote>
-              <code>&gt; Write my essay about renewable energy</code>
-            </blockquote>
-            <p>
-              Paste the raw prompt without context, relying entirely on AI to
-              guess requirements.
+      <!-- Real assignment example -->
+      <section class="example-section">
+        <article class="example-card">
+          <header class="example-header">
+            <p class="protip-text">
+              💡 <strong>Pro tip:</strong> This methodology works for any
+              project: essays, coding tasks, research, or math problems.
             </p>
-          </div>
+            <p class="example-title">Real Assignment Example:</p>
+          </header>
 
-          <div class="comparison-box box-good">
-            <header class="box-header">
-              <span class="badge badge-good">✅ Good Approach</span>
-            </header>
-
-            <blockquote>
-              <code
-                >&gt; Help me outline an essay analyzing solar vs wind energy
-                efficiency for high-school students. Focus on cost and
-                environmental impact.</code
-              >
-            </blockquote>
-            <p>
-              Define clear constraints, audience, and goal before generating
-              content.
-            </p>
-          </div>
+          <blockquote class="assignment-text">
+            Write a <mark class="hl-purple">2-page analytical essay</mark> on
+            the
+            <mark class="hl-blue"
+              >impact of automations on the labour force</mark
+            >. The text must include at
+            <mark class="hl-green"
+              >least 3 arguments with real life examples</mark
+            >
+            and be targeted as
+            <mark class="hl-orange">economics students</mark>.
+          </blockquote>
         </article>
       </section>
 
-      <!-- Next step button -->
-      <section class="step-navigation-footer">
-        <p class="next-label">Ready for the next step?</p>
-        <p>
-          <a href="prompts.html" class="btn-hero">02. Write Prompts &rarr;</a>
+      <!-- Task readiness checklist -->
+      <section class="checklist-section">
+        <h2>Task Readiness Checklist</h2>
+
+        <form
+          class="checklist-form"
+          action="#"
+          method="post"
+          onsubmit="return false;"
+        >
+          <fieldset class="checklist-fieldset">
+            <legend class="sr-only">
+              Check items before moving to the next step
+            </legend>
+
+            <label class="toggle-control">
+              <input
+                type="checkbox"
+                name="check_deliverable"
+                class="toggle-input"
+              />
+              <span class="toggle-switch"></span>
+              <span class="toggle-label">I know what I need to do</span>
+            </label>
+
+            <label class="toggle-control">
+              <input
+                type="checkbox"
+                name="check_requirements"
+                class="toggle-input"
+              />
+              <span class="toggle-switch"></span>
+              <span class="toggle-label"
+                >I know the key requirements of the assignment</span
+              >
+            </label>
+
+            <label class="toggle-control">
+              <input type="checkbox" name="check_role" class="toggle-input" />
+              <span class="toggle-switch"></span>
+              <span class="toggle-label"
+                >I know my role and who I'm doing it for</span
+              >
+            </label>
+
+            <label class="toggle-control">
+              <input
+                type="checkbox"
+                name="check_ai_help"
+                class="toggle-input"
+              />
+              <span class="toggle-switch"></span>
+              <span class="toggle-label"
+                >I know what I actually need AI's help with</span
+              >
+            </label>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- 4. Next CTA button -->
+      <section class="cta-next-step">
+        <p class="cta-subtext">Know what you need. Now ask for it.</p>
+        <p class="cta-action">
+          <a href="prompts.html" class="btn-hero"
+            >WRITE BETTER PROMPTS &rarr;</a
+          >
         </p>
       </section>
     </main>
 
     <!-- Site footer -->
+
     <footer class="site-footer">
       <p>&copy; 2026 AI for Better Learning Project. All rights reserved.</p>
     </footer>
