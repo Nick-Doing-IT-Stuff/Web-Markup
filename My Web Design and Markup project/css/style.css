@@ -1202,3 +1202,225 @@ mark {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   10. STEP 05: CONTACTS SPECIFIC STYLES
+   ========================================================================== */
+
+.contact-page {
+    max-width: 56.25rem;
+    /* 900px */
+    margin: 0 auto;
+}
+
+/* Two-Column Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.contact-info-card,
+.contact-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-info-card h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.expectations-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.expectations-list li strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--brand-blue);
+    margin-bottom: 0.25rem;
+}
+
+.expectations-list li p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Form Controls */
+.form-fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.required-star {
+    color: #ef4444;
+    background: none;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius-md);
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    background-color: #ffffff;
+}
+
+.btn-full {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+/* Success Banner State */
+.success-banner-card {
+    display: none;
+    /* Сховано за замовчуванням */
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    color: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 2rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    box-shadow: var(--shadow-md);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.success-banner-card h2 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.success-message {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.success-banner-card .btn-hero {
+    background-color: #ffffff;
+    color: var(--brand-blue);
+}
+
+.success-banner-card .btn-hero:hover {
+    background-color: #f8fafc;
+    color: var(--brand-blue-hover);
+}
+
+/* Switch from Form to Success Banner via CSS */
+#form-submitted-toggle:checked~.contact-form-container {
+    display: none;
+}
+
+#form-submitted-toggle:checked~.success-banner-card {
+    display: block;
+}
+
+/* Let's Connect Social Section */
+.connect-section {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-light);
+    margin-bottom: 3.5rem;
+}
+
+.connect-section h2 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.smile-icon {
+    color: var(--brand-blue);
+}
+
+.social-links-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-pill);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.social-links-list a:hover {
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-icon {
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 52rem) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts — AI for Better Learning</title>
+    <meta
+      name="description"
+      content="Get in touch with us to ask questions, suggest edits, or give feedback on responsible AI learning."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Main Navigation">
+        <p class="logo-title">
+          <a href="index.html">AI for Better Learning</a>
+        </p>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="understand.html">01. Understand Task</a></li>
+          <li><a href="prompts.html">02. Write Prompts</a></li>
+          <li><a href="evaluate.html">03. Evaluate Output</a></li>
+          <li><a href="make-it-yours.html">04. Make It Yours</a></li>
+          <li>
+            <a href="contact.html" class="active" aria-current="page"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="contact-page">
+      <!-- Controller for Success State View -->
+      <input
+        type="checkbox"
+        id="form-submitted-toggle"
+        class="css-toggle-radio"
+      />
+
+      <!-- Default Form View Container -->
+      <section class="contact-form-container">
+        <!-- Hero Header -->
+        <section class="hero-step">
+          <p class="step-tag">CONTACT/FEEDBACK PAGE</p>
+          <h1>Contact Us</h1>
+          <p class="hero-lead">
+            If you have any questions or would like to share feedback and
+            suggestions for improving the website, feel free to reach out to us.
+          </p>
+        </section>
+
+        <!-- Two-Column Layout (Info Sidebar + Form) -->
+        <section class="contact-grid">
+          <!-- Left Column: Visual Expectations & Scope -->
+          <article class="contact-info-card">
+            <h2>What to Expect</h2>
+            <ul class="expectations-list">
+              <li>
+                <strong>🤝 Human Response</strong>
+                <p>
+                  We review all feedback carefully to make this guide better for
+                  students.
+                </p>
+              </li>
+              <li>
+                <strong>🔒 Honest Prototype</strong>
+                <p>
+                  Your contact details are only used if you request a direct
+                  reply from us.
+                </p>
+              </li>
+              <li>
+                <strong>⏱️ Quick Reply</strong>
+                <p>
+                  If a response is needed, you will hear back via email as soon
+                  as possible.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <article class="contact-card">
+            <form
+              action="#"
+              method="post"
+              class="contact-form"
+              onsubmit="
+                event.preventDefault();
+                document.getElementById('form-submitted-toggle').checked = true;
+              "
+            >
+              <fieldset class="form-fieldset">
+                <legend class="sr-only">Contact Information</legend>
+
+                <!-- Salutation Dropdown / Radio -->
+                <p class="form-group">
+                  <label for="user-salutation"
+                    >Choose your salutation
+                    <mark class="required-star">*</mark></label
+                  >
+                  <select
+                    id="user-salutation"
+                    name="salutation"
+                    required
+                    aria-required="true"
+                  >
+                    <option value="" disabled selected>
+                      -- Select an option --
+                    </option>
+                    <option value="mr">Mr.</option>
+                    <option value="mrs">Mrs.</option>
+                    <option value="ms">Ms.</option>
+                    <option value="other">Other / Prefer not to say</option>
+                  </select>
+                </p>
+
+                <!-- Name -->
+                <p class="form-group">
+                  <label for="user-name"
+                    >Name <mark class="required-star">*</mark></label
+                  >
+                  <input
+                    type="text"
+                    id="user-name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                    aria-required="true"
+                  />
+                </p>
+
+                <!-- Email -->
+                <p class="form-group">
+                  <label for="user-email"
+                    >Email Address <mark class="required-star">*</mark></label
+                  >
+                  <input
+                    type="email"
+                    id="user-email"
+                    name="email"
+                    placeholder="johndoe@youremail.com"
+                    required
+                    aria-required="true"
+                  />
+                </p>
+
+                <!-- Subject -->
+                <p class="form-group">
+                  <label for="form-subject"
+                    >What is this about?
+                    <mark class="required-star">*</mark></label
+                  >
+                  <select
+                    id="form-subject"
+                    name="subject"
+                    required
+                    aria-required="true"
+                  >
+                    <option value="" disabled selected>
+                      -- Select subject --
+                    </option>
+                    <option value="feedback">General feedback</option>
+                    <option value="question">Question about guide</option>
+                    <option value="bug">Report an error</option>
+                    <option value="improvement">Suggest an improvement</option>
+                  </select>
+                </p>
+
+                <!-- Message -->
+                <p class="form-group">
+                  <label for="user-message"
+                    >Message <mark class="required-star">*</mark></label
+                  >
+                  <textarea
+                    id="user-message"
+                    name="message"
+                    rows="4"
+                    placeholder="Type your message here..."
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </p>
+
+                <!-- Submit Button -->
+                <p class="form-submit-row">
+                  <button type="submit" class="btn-hero btn-full">
+                    Send Message &rarr;
+                  </button>
+                </p>
+              </fieldset>
+            </form>
+          </article>
+        </section>
+      </section>
+
+      <!-- Success State View (Appears upon sending) -->
+      <section class="success-banner-card">
+        <span class="success-icon">🎉</span>
+        <h2>Thank you for contacting us!</h2>
+        <p class="success-message">
+          We received your message.<br />
+          We will reach you out immediately!
+        </p>
+        <p class="success-action">
+          <a href="index.html" class="btn-hero">Go back to Homepage &rarr;</a>
+        </p>
+      </section>
+
+      <!-- Let's Connect Social Section -->
+      <section class="connect-section">
+        <h2>Let's Connect! <span class="smile-icon">😊</span></h2>
+
+        <ul class="social-links-list">
+          <li>
+            <a href="mailto:your.email@university.edu" aria-label="Send email">
+              <span class="social-icon">✉️</span> Email
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn profile"
+            >
+              <span class="social-icon">💼</span> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://telegram.org"
+              target="_blank"
+              rel="noopener"
+              aria-label="Telegram account"
+            >
+              <span class="social-icon">✈️</span> Telegram
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://whatsapp.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp account"
+            >
+              <span class="social-icon">💬</span> WhatsApp
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram profile"
+            >
+              <span class="social-icon">📷</span> Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook profile"
+            >
+              <span class="social-icon">🌐</span> Facebook
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2026 AI for Better Learning Project. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
