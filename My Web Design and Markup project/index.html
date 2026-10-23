@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Skip link for accessibility -->
+    <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
+    <!-- Header & Navigation -->
     <header class="site-header">
       <nav class="main-nav" aria-label="Main Navigation">
         <p class="logo-title">
@@ -33,10 +33,29 @@
       </nav>
     </header>
 
-    <main id="main-content">
-      <section class="hero-layout">
-        <!-- Left column prompts -->
-        <aside class="prompt-column column-left">
+    <!-- Main Content -->
+    <main id="main-content" class="home-page">
+      <!-- Top Hero Section (Centered Callout) -->
+      <section class="hero-home-centered">
+        <h1>AI FOR BETTER LEARNING</h1>
+        <p class="hero-subtitle">Use AI to learn better. Not to think less.</p>
+        <p class="hero-description">
+          The difference isn't always the AI. Sometimes, it's how you use it.
+        </p>
+
+        <p class="hero-cta-wrapper">
+          <a href="understand.html" class="btn-hero">Find out why &rarr;</a>
+        </p>
+      </section>
+
+      <!-- Prompts Grid Showcase Section -->
+      <section class="prompts-showcase-section">
+        <h2 class="showcase-title">
+          Why are some artificial intelligence answers better than others?
+        </h2>
+
+        <div class="prompts-grid-horizontal">
+          <!-- Row 1 / Card 1 -->
           <article class="prompt-card">
             <header class="prompt-header">
               <code>&gt; Write an essay about Ecology</code>
@@ -49,24 +68,7 @@
             </footer>
           </article>
 
-          <article class="prompt-card">
-            <header class="prompt-header">
-              <code>&gt; Review my C# code for performance bottlenecks.</code>
-            </header>
-            <p>
-              Here is the detailed analysis highlighting memory efficiency
-              tips...
-            </p>
-            <footer class="prompt-footer">
-              <span
-                class="emoji-badge"
-                role="img"
-                aria-label="Hugging face with hands"
-                >🤗</span
-              >
-            </footer>
-          </article>
-
+          <!-- Row 1 / Card 2 -->
           <article class="prompt-card">
             <header class="prompt-header">
               <code>&gt; Explain quantum mechanics like I'm 10 years old</code>
@@ -81,28 +83,26 @@
               >
             </footer>
           </article>
-        </aside>
 
-        <!-- Central section -->
-        <article class="hero-center-card">
-          <h1>AI FOR BETTER LEARNING</h1>
-          <p class="hero-subtitle">
-            Use AI to learn better, not to think less.
-          </p>
-          <p class="hero-description">
-            The difference isn't always the AI. Sometimes, it's how you use it.
-          </p>
-          <p class="hero-question">
-            Why are some artificial intelligence answers better than others?
-          </p>
+          <!-- Row 1 / Card 3 -->
+          <article class="prompt-card">
+            <header class="prompt-header">
+              <code>&gt; Review my C# code for performance bottlenecks.</code>
+            </header>
+            <p>
+              Here the detailed analysis highlighting memory efficiency tips...
+            </p>
+            <footer class="prompt-footer">
+              <span
+                class="emoji-badge"
+                role="img"
+                aria-label="Hugging face with hands"
+                >🤗</span
+              >
+            </footer>
+          </article>
 
-          <p class="hero-cta-wrapper">
-            <a href="understand.html" class="btn-hero">Find out why &rarr;</a>
-          </p>
-        </article>
-
-        <!-- Right column prompts -->
-        <aside class="prompt-column column-right">
+          <!-- Row 1 / Card 4 -->
           <article class="prompt-card">
             <header class="prompt-header">
               <code>&gt; Write my conclusion for me</code>
@@ -118,6 +118,7 @@
             </footer>
           </article>
 
+          <!-- Row 2 / Card 1 -->
           <article class="prompt-card">
             <header class="prompt-header">
               <code>&gt; Solve math homework</code>
@@ -135,6 +136,7 @@
             </footer>
           </article>
 
+          <!-- Row 2 / Card 2 -->
           <article class="prompt-card">
             <header class="prompt-header">
               <code>&gt; Give me sources for this topic</code>
@@ -149,12 +151,27 @@
               >
             </footer>
           </article>
-        </aside>
+
+          <!-- Row 2 / Card 3 -->
+          <article class="prompt-card">
+            <header class="prompt-header">
+              <code>&gt; Create authentic logo for sauce specialised shop</code>
+            </header>
+            <p>
+              Creates sauces that look like they could be from a movie, not a
+              logo picture...
+            </p>
+            <footer class="prompt-footer">
+              <span class="emoji-badge" role="img" aria-label="Sick face"
+                >🤢</span
+              >
+            </footer>
+          </article>
+        </div>
       </section>
     </main>
 
-    <!-- Site footer -->
-
+    <!-- Footer -->
     <footer class="site-footer">
       <p>&copy; 2026 AI for Better Learning Project. All rights reserved.</p>
     </footer>

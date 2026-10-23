@@ -122,7 +122,69 @@ body {
     gap: 1.25rem;
 }
 
-/* Prompt cards */
+/* ==========================================================================
+   3. HOME PAGE SPECIFIC STYLES (Vertical Stacked Layout)
+   ========================================================================== */
+
+.home-page {
+    max-width: 75rem;
+    /* 1200px */
+    margin: 0 auto;
+}
+
+/* Centered Top Hero */
+.hero-home-centered {
+    text-align: center;
+    padding: 3rem 1rem 4rem 1rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.hero-home-centered h1 {
+    font-size: 2.75rem;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.hero-home-centered .hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.hero-home-centered .hero-description {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* Prompts Grid Showcase Section */
+.prompts-showcase-section {
+    margin-bottom: 4rem;
+}
+
+.showcase-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Flexible Grid for Cards (Auto-fill/fit for smooth responsiveness) */
+.prompts-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* Prompt Card Formatting */
 .prompt-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-light);
@@ -131,14 +193,22 @@ body {
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 10rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prompt-card:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: var(--shadow-md);
 }
 
 .prompt-header code {
     font-family: monospace;
     font-size: 0.85rem;
     color: #475569;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 0.2rem 0.5rem;
     border-radius: 0.375rem;
     display: inline-block;
@@ -148,57 +218,25 @@ body {
 .prompt-card p {
     font-size: 0.95rem;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .prompt-footer {
     display: flex;
     justify-content: flex-end;
-    font-size: 1.4rem;
-    margin-top: 0.25rem;
+    font-size: 1.5rem;
 }
 
-/* Central hero */
-.hero-center-card {
-    background-color: var(--hero-bg);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: 3.5rem 2rem;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+/* Responsive Breakpoints */
+@media (max-width: 48rem) {
+    .hero-home-centered h1 {
+        font-size: 2rem;
+    }
 
-.hero-center-card h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: -0.025em;
-    color: var(--text-primary);
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 0.75rem;
-}
-
-.hero-description {
-    font-size: 1rem;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-bottom: 0.5rem;
-}
-
-.hero-question {
-    font-size: 1rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
+    .showcase-title {
+        text-align: center;
+    }
 }
 
 /* Primary CTA button */
