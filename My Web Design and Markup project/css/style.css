@@ -1,21 +1,19 @@
-/* Home page (page styles) */
+/* ==========================================================================
+   GLOBAL RESET & VARIABLES
+   ========================================================================== */
 :root {
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --bg-color: #f8fafc;
-    --header-bg: #ffffff;
-    --text-primary: #1e293b;
-    --text-muted: #64748b;
     --brand-blue: #2563eb;
     --brand-blue-hover: #1d4ed8;
-    --nav-active-bg: #eff6ff;
-    --card-bg: #f1f5f9;
-    --hero-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
     --border-light: #e2e8f0;
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 10px 25px rgba(37, 99, 235, 0.06);
-    --radius-lg: 1.5rem;
     --radius-md: 1rem;
     --radius-pill: 9999px;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.06);
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -29,162 +27,164 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
+/* Accessibility Skip Link (Fixed blue line artifact) */
 .skip-link {
     position: absolute;
-    top: -100px;
-    left: 1rem;
+    top: -9999px;
+    left: -9999px;
     background: var(--brand-blue);
-    color: #fff;
+    color: white;
     padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
     z-index: 100;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .skip-link:focus {
-    top: 1rem;
+    top: 0;
+    left: 0;
 }
 
+/* Header & Navigation */
 .site-header {
-    background-color: var(--header-bg);
+    background-color: #ffffff;
     border-bottom: 1px solid var(--border-light);
-    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 50;
 }
 
 .main-nav {
-    max-width: 1280px;
+    max-width: 75rem;
     margin: 0 auto;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-title a {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--brand-blue);
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
     text-decoration: none;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--brand-blue);
+}
+
+.logo-icon {
+    color: var(--brand-blue);
+}
+
+.logo-text {
+    letter-spacing: -0.01em;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-muted);
+    font-size: 0.9rem;
     font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-pill);
-    transition: all 0.2s ease;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-    color: var(--brand-blue);
-}
-
+.nav-links a:hover,
 .nav-links a.active {
-    background-color: var(--nav-active-bg);
     color: var(--brand-blue);
-}
-
-#main-content {
-    flex: 1;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
-}
-
-.hero-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.6fr 1fr;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-/* Columns for prompts */
-.prompt-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
 }
 
 /* ==========================================================================
-   3. HOME PAGE SPECIFIC STYLES (Vertical Stacked Layout)
+   HOME PAGE & 3-COLUMN GRID STYLES
    ========================================================================== */
-
 .home-page {
-    max-width: 75rem;
-    /* 1200px */
+    max-width: 65rem;
     margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 /* Centered Top Hero */
 .hero-home-centered {
     text-align: center;
-    padding: 3rem 1rem 4rem 1rem;
-    max-width: 50rem;
+    padding: 2.5rem 1rem 3.5rem 1rem;
+    max-width: 45rem;
     margin: 0 auto;
 }
 
 .hero-home-centered h1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     font-weight: 900;
     letter-spacing: -0.025em;
     color: var(--text-primary);
     line-height: 1.15;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .hero-home-centered .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-style: italic;
 }
 
 .hero-home-centered .hero-description {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    font-style: italic;
-}
-
-/* Prompts Grid Showcase Section */
-.prompts-showcase-section {
-    margin-bottom: 4rem;
-}
-
-.showcase-title {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1rem;
     color: var(--text-muted);
     margin-bottom: 2rem;
     font-style: italic;
 }
 
-/* Flexible Grid for Cards (Auto-fill/fit for smooth responsiveness) */
+/* Main Hero CTA Button */
+.btn-hero {
+    display: inline-block;
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-hero:hover {
+    background-color: var(--brand-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Prompts Showcase Section */
+.prompts-showcase-section {
+    margin-bottom: 4rem;
+}
+
+.showcase-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+/* Strict 3-Column Grid Layout */
 .prompts-grid-horizontal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
-/* Prompt Card Formatting */
+/* Prompt Card Formatting with Equal Height */
 .prompt-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-light);
@@ -195,7 +195,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    min-height: 10rem;
+    min-height: 12.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -206,87 +206,50 @@ body {
 
 .prompt-header code {
     font-family: monospace;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #475569;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0.2rem 0.5rem;
+    background-color: #f8fafc;
+    padding: 0.25rem 0.5rem;
     border-radius: 0.375rem;
-    display: inline-block;
+    display: block;
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .prompt-card p {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: var(--text-primary);
-    font-weight: 600;
-    line-height: 1.4;
+    font-weight: 500;
+    line-height: 1.45;
 }
 
 .prompt-footer {
     display: flex;
     justify-content: flex-end;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    margin-top: auto;
+}
+
+/* Full-width Footer */
+.site-footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-light);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 3rem;
 }
 
 /* Responsive Breakpoints */
 @media (max-width: 48rem) {
-    .hero-home-centered h1 {
-        font-size: 2rem;
-    }
-
-    .showcase-title {
-        text-align: center;
-    }
-}
-
-/* Primary CTA button */
-.hero-cta-wrapper {
-    margin-top: 0.5rem;
-}
-
-.btn-hero {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--brand-blue);
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    padding: 0.9rem 2.25rem;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
-    transition: all 0.2s ease-in-out;
-}
-
-.btn-hero:hover,
-.btn-hero:focus {
-    background-color: var(--brand-blue-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
-}
-
-.site-footer {
-    text-align: center;
-    padding: 1.5rem;
-    border-top: 1px solid var(--border-light);
-    background-color: var(--header-bg);
-    color: var(--text-muted);
-    font-size: 0.875rem;
-}
-
-@media (max-width: 1024px) {
-    .hero-layout {
+    .prompts-grid-horizontal {
         grid-template-columns: 1fr;
     }
 
-    .hero-center-card {
-        grid-row: 1;
-        padding: 2.5rem 1.5rem;
-    }
-
-    .hero-center-card h1 {
-        font-size: 2rem;
+    .hero-home-centered h1 {
+        font-size: 1.85rem;
     }
 
     .main-nav {
@@ -297,433 +260,595 @@ body {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 0.75rem 1rem;
     }
 }
 
 
 /* UNDERSTAND THE TASK */
 
-.understand-page {
-    max-width: 900px;
-    margin: 0 auto;
+/* ==========================================================================
+   GLOBAL RESET & VARIABLES
+   ========================================================================== */
+:root {
+    --brand-blue: #2563eb;
+    --brand-blue-hover: #1d4ed8;
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --border-light: #e2e8f0;
+    --radius-md: 1rem;
+    --radius-pill: 9999px;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.06);
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Steps Cascade List */
-.method-section {
-    margin-bottom: 3rem;
-}
-
-.method-section h2 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
-}
-
-.steps-cascade {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding-left: 1rem;
-}
-
-.step-item {
-    font-size: 1.15rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.step-num {
-    font-weight: 800;
-}
-
-/* Color coding for 5 steps matching Figma mockup */
-.step-1 {
-    color: #a855f7;
-    margin-left: 0rem;
-}
-
-.step-2 {
-    color: #3b82f6;
-    margin-left: 1.5rem;
-}
-
-.step-3 {
-    color: #22c55e;
-    margin-left: 3rem;
-}
-
-.step-4 {
-    color: #f97316;
-    margin-left: 4.5rem;
-}
-
-.step-5 {
-    color: #ef4444;
-    margin-left: 6rem;
-}
-
-/* Real Assignment Example Box */
-.example-section {
-    margin-bottom: 3.5rem;
-}
-
-.example-card {
-    background-color: #ffffff;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: 2rem 2.5rem;
-    box-shadow: var(--shadow-sm);
-}
-
-.protip-text {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 0.75rem;
-    font-style: italic;
-}
-
-.example-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-}
-
-.assignment-text {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    font-weight: 600;
-    color: #0f172a;
-}
-
-/* Text Highlights corresponding to steps */
-mark {
-    padding: 0.15rem 0.4rem;
-    border-radius: 0.25rem;
-    font-weight: 700;
-}
-
-.hl-purple {
-    background-color: #f3e8ff;
-    color: #7e22ce;
-}
-
-.hl-blue {
-    background-color: #dbeafe;
-    color: #1e40af;
-}
-
-.hl-green {
-    background-color: #dcfce7;
-    color: #15803d;
-}
-
-.hl-orange {
-    background-color: #ffedd5;
-    color: #c2410c;
-}
-
-/* Checklist Section with Modern Toggle Switches */
-.checklist-section {
-    background-color: #ffffff;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: 2rem 2.5rem;
-    margin-bottom: 3.5rem;
-    box-shadow: var(--shadow-sm);
-}
-
-.checklist-section h2 {
-    font-size: 1.35rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
-}
-
-.checklist-fieldset {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }
 
-/* Custom CSS Toggle Switch */
-.toggle-control {
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    background: var(--brand-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.main-nav {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
     display: inline-flex;
     align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-    user-select: none;
-}
-
-.toggle-input {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-switch {
-    width: 2.75rem;
-    height: 1.5rem;
-    background-color: #cbd5e1;
-    border-radius: var(--radius-pill);
-    position: relative;
-    transition: background-color 0.25s ease;
-    flex-shrink: 0;
-}
-
-.toggle-switch::after {
-    content: "";
-    position: absolute;
-    top: 0.15rem;
-    left: 0.15rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transition: transform 0.25s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* Checked State Styles */
-.toggle-input:checked+.toggle-switch {
-    background-color: #10b981;
-}
-
-.toggle-input:checked+.toggle-switch::after {
-    transform: translateX(1.25rem);
-}
-
-.toggle-label {
+    gap: 0.6rem;
+    text-decoration: none;
+    font-weight: 800;
     font-size: 1.05rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    transition: color 0.2s ease, font-weight 0.2s ease;
+    color: var(--brand-blue);
 }
 
-.toggle-input:checked~.toggle-label {
-    color: var(--text-primary);
+.logo-icon {
+    color: var(--brand-blue);
+}
+
+.logo-text {
+    letter-spacing: -0.01em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--brand-blue);
+}
+
+/* Main Hero CTA Button */
+.btn-hero {
+    display: inline-block;
+    background-color: var(--brand-blue);
+    color: #ffffff;
     font-weight: 700;
+    font-size: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-.toggle-input:focus-visible+.toggle-switch {
-    outline: 2px solid var(--brand-blue);
-    outline-offset: 2px;
+.btn-hero:hover {
+    background-color: var(--brand-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
 }
 
-/* CTA Next Step Section */
-.cta-next-step {
-    text-align: center;
-    padding: 2rem 0;
-}
+/* ==========================================================================
+   STEP 01: UNDERSTAND TASK SPECIFIC STYLES
+   ========================================================================== */
 
-.cta-subtext {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .steps-cascade .step-item {
-        margin-left: 0 !important;
-    }
-
-    .assignment-text {
-        font-size: 1.1rem;
-    }
+.understand-page {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .hero-step {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 3rem;
-    width: 100%;
+    padding: 2.5rem 0 2rem 0;
+    max-width: 42rem;
+    margin: 0 auto;
 }
 
-.step-tag {
-    font-size: 0.85rem;
+.step-tag-blue {
+    font-size: 0.8rem;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     color: var(--brand-blue);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
 
 .hero-step h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: var(--text-primary);
-    margin-bottom: 0.75rem;
-    text-align: center;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    letter-spacing: -0.025em;
 }
 
 .hero-lead {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
-    max-width: 750px;
-    margin: 0 auto;
+}
+
+/* Steps Editorial Section (Compact List з відновленими кольорами) */
+.steps-editorial-section {
+    margin-bottom: 2.5rem;
+}
+
+.steps-editorial-section h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+}
+
+.steps-clean-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding-left: 0.5rem;
+}
+
+.step-clean-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.4rem 0;
+    transition: transform 0.2s ease;
+}
+
+.step-clean-item:hover {
+    transform: translateX(4px);
+}
+
+.step-badge {
+    font-size: 0.75rem;
+    font-weight: 900;
+    padding: 0.25rem 0.55rem;
+    border-radius: 0.375rem;
+    flex-shrink: 0;
+}
+
+/* Насичені кольори для кожного кроку (бейджи та текст) */
+.step-clean-item.s-1 .step-badge {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+}
+
+.step-clean-item.s-1 .step-text {
+    color: #7e22ce;
+}
+
+.step-clean-item.s-2 .step-badge {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.step-clean-item.s-2 .step-text {
+    color: #1d4ed8;
+}
+
+.step-clean-item.s-3 .step-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.step-clean-item.s-3 .step-text {
+    color: #15803d;
+}
+
+.step-clean-item.s-4 .step-badge {
+    background-color: #ffedd5;
+    color: #c2410c;
+}
+
+.step-clean-item.s-4 .step-text {
+    color: #c2410c;
+}
+
+.step-clean-item.s-5 .step-badge {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.step-clean-item.s-5 .step-text {
+    color: #b91c1c;
+}
+
+/* Real Assignment Example Card */
+.example-box-section {
+    margin-bottom: 2.5rem;
+}
+
+.example-card-editorial {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.pro-tip {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.example-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.example-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1e293b;
+}
+
+/* Highlight Markers */
+.hl-pink {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.hl-blue {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.hl-green {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.hl-orange {
+    background-color: #ffedd5;
+    color: #c2410c;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+/* Task Readiness Checklist with Custom Checkboxes & Bold Active State */
+.checklist-section {
+    margin-bottom: 3.5rem;
+}
+
+.checklist-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.checklist-card h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+}
+
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox-row:hover {
+    background-color: #f8fafc;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+/* Стилізований квадратний чекбокс */
+.custom-checkbox {
+    width: 1.35rem;
+    height: 1.35rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 0.375rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.checkbox-input:checked+.custom-checkbox {
+    background-color: var(--brand-blue);
+    border-color: var(--brand-blue);
+}
+
+.custom-checkbox::after {
+    content: "";
+    width: 0.35rem;
+    height: 0.65rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    transition: transform 0.2s ease;
+    margin-bottom: 0.1rem;
+}
+
+.checkbox-input:checked+.custom-checkbox::after {
+    transform: rotate(45deg) scale(1);
+}
+
+/* Реакція тексту: перехід у Bold (700) при активації */
+.checkbox-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: font-weight 0.15s ease, color 0.15s ease;
+}
+
+.checkbox-input:checked~.checkbox-text {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* CTA Next Step Section */
+.cta-next-step {
     text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cta-subtext {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+/* Full-width Footer */
+.site-footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-light);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 3rem;
 }
 
 /* WRITE BETTER PROMPTS */
 
+/* ==========================================================================
+   STEP 02: WRITE PROMPTS SPECIFIC STYLES (Vibrant & Saturated)
+   ========================================================================== */
+
 .prompts-page {
-    max-width: 56.25rem;
-    /* 900px */
+    max-width: 55rem;
     margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.prompts-comparison {
+/* Prompt Examples Section */
+.prompt-examples-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 3.5rem;
 }
 
-.prompt-box {
-    background-color: #ffffff;
+.prompt-demo-card {
+    background-color: var(--card-bg);
     border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: 1.75rem 2rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
     box-shadow: var(--shadow-sm);
 }
 
-.box-weak {
-    border-top: 0.25rem solid #ef4444;
+.demo-status-bar {
+    height: 4px;
+    width: 100%;
 }
 
-.box-structured {
-    border-top: 0.25rem solid #10b981;
+.red-bar {
+    background-color: #ef4444;
 }
 
-/* AI Chat Window Simulation */
-.ai-input-window {
-    background-color: #ffffff;
-    border: 1.5px solid #cbd5e1;
-    border-radius: 1.25rem;
-    padding: 1.25rem 1.5rem;
-    margin: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+.green-bar {
+    background-color: #22c55e;
+}
+
+.demo-content {
+    padding: 1.75rem;
+}
+
+.demo-label {
+    margin-bottom: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 7.5rem;
+    align-items: center;
 }
 
-.active-window {
-    border-color: #93c5fd;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 900;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.375rem;
+    letter-spacing: 0.05em;
 }
 
-.prompt-text-weak {
+.red-badge {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.green-badge {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+/* Prompt Snippet Box (Clean & High-contrast) */
+.prompt-snippet-box {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.prompt-snippet-box code {
     font-family: var(--font-family);
     font-size: 1.05rem;
-    color: #94a3b8;
-    margin-bottom: 1.5rem;
-}
-
-.prompt-text-structured {
-    font-family: var(--font-family);
-    font-size: 1.1rem;
+    color: var(--text-primary);
     line-height: 1.7;
-    color: #0f172a;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    display: block;
+    word-break: break-word;
+    font-weight: 500;
 }
 
-.window-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0.5rem;
-}
-
-.toolbar-icons {
-    display: flex;
-    gap: 1rem;
-    color: #64748b;
-    font-size: 1.1rem;
-    user-select: none;
-}
-
-.send-btn {
-    width: 2.25rem;
-    height: 2.25rem;
-    background-color: #e2e8f0;
-    color: #94a3b8;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 1.1rem;
-    user-select: none;
-}
-
-.send-btn-active {
-    background-color: var(--brand-blue);
-    color: #ffffff;
-}
-
-.prompt-explanation {
+.demo-explanation {
     font-size: 0.95rem;
     color: var(--text-muted);
 }
 
-/* Structure Breakdown Section (Strict Centering) */
-.structure-section {
+.demo-explanation strong {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   SUPER VIBRANT & SATURATED HIGHLIGHT MARKERS (Повертаємо максимальну яскравість)
+   ========================================================================== */
+.hl-green {
+    background-color: #bbf7d0;
+    color: #14532d;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+}
+
+.hl-blue {
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+}
+
+.hl-purple {
+    background-color: #e9d5ff;
+    color: #581c87;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+}
+
+.hl-orange {
+    background-color: #fed7aa;
+    color: #7c2d12;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+}
+
+/* Structure of a Strong Prompt Section */
+.prompt-structure-section {
     margin-bottom: 3.5rem;
-    width: 100%;
 }
 
-.structure-header {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-    width: 100%;
-}
-
-.down-arrow {
-    display: block;
-    font-size: 2.25rem;
-    color: var(--brand-blue);
-    line-height: 1;
-    margin-bottom: 0.75rem;
-    text-align: center;
-}
-
-.structure-header h2 {
-    font-size: 1.5rem;
+.prompt-structure-section h2 {
+    font-size: 1.35rem;
     font-weight: 800;
     color: var(--text-primary);
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-/* Clean 2x2 Grid */
 .structure-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -731,70 +856,84 @@ mark {
 }
 
 .structure-card {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-md);
-    padding: 1.5rem 1.75rem;
+    padding: 1.5rem;
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card-header {
+.structure-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-header-tag {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
 }
 
-.card-header h3 {
-    font-size: 1rem;
+.card-header-tag h3 {
+    font-size: 0.9rem;
     font-weight: 800;
     letter-spacing: 0.05em;
     color: var(--text-primary);
 }
 
 .dot {
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 0.55rem;
+    height: 0.55rem;
     border-radius: 50%;
-    display: inline-block;
 }
 
-.dot-green {
+.green-dot {
     background-color: #22c55e;
 }
 
-.dot-blue {
+.blue-dot {
     background-color: #3b82f6;
 }
 
-.dot-purple {
+.purple-dot {
     background-color: #a855f7;
 }
 
-.dot-orange {
+.orange-dot {
     background-color: #f97316;
 }
 
-.sample-quote {
-    font-family: monospace;
-    font-size: 0.95rem;
-    background-color: #f1f5f9;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
-    color: #334155;
-    font-style: italic;
-    margin: 0;
+.mini-snippet-preview {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-light);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
 }
 
-.card-description {
+.mini-snippet-preview code {
+    font-family: var(--font-family);
+    font-size: 0.85rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.structure-card p {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.5;
 }
 
-/* Responsive adjustment */
+.structure-card p strong {
+    color: var(--text-primary);
+}
+
+/* Responsive breakpoint for 2-column grid */
 @media (max-width: 48rem) {
     .structure-grid {
         grid-template-columns: 1fr;

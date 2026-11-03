@@ -6,7 +6,7 @@
     <title>02. Write Prompts — AI for Better Learning</title>
     <meta
       name="description"
-      content="Learn how to construct structured and effective AI prompts with clear context, task, format, and requirements."
+      content="Learn how to write precise, structured prompts to get better and more accurate answers from AI."
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -17,9 +17,27 @@
     <!-- Header & Navigation -->
     <header class="site-header">
       <nav class="main-nav" aria-label="Main Navigation">
-        <p class="logo-title">
-          <a href="index.html">AI for Better Learning</a>
-        </p>
+        <a href="index.html" class="logo-container">
+          <svg
+            class="logo-icon"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2a10 10 0 0 1 7.54 16.54M2 12h20M12 22a10 10 0 0 1-7.54-16.54"
+            />
+            <path d="M6 12h12" stroke-dasharray="2 2" />
+          </svg>
+          <span class="logo-text">AI for Better Learning</span>
+        </a>
+
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="understand.html">01. Understand Task</a></li>
@@ -35,155 +53,139 @@
       </nav>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main id="main-content" class="prompts-page">
-      <!-- Page Hero Header -->
+      <!-- Hero Header -->
       <section class="hero-step">
-        <p class="step-tag">STEP 02</p>
+        <p class="step-tag-blue">STEP 02</p>
         <h1>Writing Better Prompts</h1>
         <p class="hero-lead">
           The clearer the request, the less AI has to guess.
         </p>
       </section>
 
-      <!-- Prompts Comparison Section (Chat Window Style) -->
-      <section class="prompts-comparison">
-        <!-- Weak Prompt Window -->
-        <article class="prompt-box box-weak">
-          <header class="box-tag-header">
-            <span class="badge badge-bad">🚫 Weak prompt example</span>
-          </header>
-
-          <div class="ai-input-window">
-            <p class="prompt-text-weak">&gt; "Write about ecology."</p>
-            <div class="window-toolbar">
-              <div class="toolbar-icons" aria-hidden="true">
-                <span>🖼️</span>
-                <span>&lt;&gt;</span>
-                <span>🎙️</span>
-              </div>
-              <span class="send-btn" aria-label="Send prompt">↑</span>
+      <!-- Prompts Comparison Section -->
+      <section class="prompt-examples-section">
+        <!-- Weak Prompt Example Card -->
+        <article class="prompt-demo-card weak-card">
+          <div class="demo-status-bar red-bar"></div>
+          <div class="demo-content">
+            <div class="demo-label weak-label">
+              <span class="status-badge red-badge">WEAK PROMPT</span>
             </div>
-          </div>
 
-          <p class="prompt-explanation">
-            <strong>Too vague:</strong> AI doesn't know what you need, who it's
-            for, or how the answer should look.
-          </p>
+            <!-- Clean Prompt Snippet Box -->
+            <div class="prompt-snippet-box">
+              <code>&gt; "Write about ecology."</code>
+            </div>
+
+            <p class="demo-explanation">
+              <strong>Too vague:</strong> AI doesn't know what you need, who
+              it's for, or how the answer should look.
+            </p>
+          </div>
         </article>
 
-        <!-- Structured Prompt Window -->
-        <article class="prompt-box box-structured">
-          <header class="box-tag-header">
-            <span class="badge badge-good"
-              >✅ Structured prompt example (and how to build one)</span
-            >
-          </header>
+        <!-- Structured Prompt Example Card -->
+        <article class="prompt-demo-card strong-card">
+          <div class="demo-status-bar green-bar"></div>
+          <div class="demo-content">
+            <div class="demo-label strong-label">
+              <span class="status-badge green-badge">OPTIMIZED PROMPT</span>
+            </div>
 
-          <div class="ai-input-window active-window">
-            <p class="prompt-text-structured">
-              &gt; "<mark class="hl-green"
-                >I am an environmental science student.</mark
-              >
-              <mark class="hl-blue"
-                >Explain the main causes of ocean pollution</mark
-              >
-              in <mark class="hl-purple">5 short bullet points</mark> using
-              <mark class="hl-orange">statistics from recent years</mark>."
-            </p>
-            <div class="window-toolbar">
-              <div class="toolbar-icons" aria-hidden="true">
-                <span>🖼️</span>
-                <span>&lt;&gt;</span>
-                <span>🎙️</span>
-              </div>
-              <span class="send-btn send-btn-active" aria-label="Send prompt"
-                >↑</span
+            <!-- Clean Prompt Snippet Box with Highlights -->
+            <div class="prompt-snippet-box">
+              <code
+                >&gt; "<mark class="hl-green"
+                  >I am an environmental science student.</mark
+                >
+                <mark class="hl-blue"
+                  >Explain the main causes of ocean pollution</mark
+                >
+                in <mark class="hl-purple">5 short bullet points</mark> using
+                <mark class="hl-orange">statistics from recent years</mark
+                >."</code
               >
             </div>
-          </div>
 
-          <p class="prompt-explanation">
-            <strong>To the point:</strong> AI knows background and depth level,
-            what your need is, how the answer should look, and specific
-            expectations.
-          </p>
+            <p class="demo-explanation">
+              <strong>To the point:</strong> AI knows background and depth
+              level, what your need is, how the answer should look, and specific
+              expectations.
+            </p>
+          </div>
         </article>
       </section>
 
-      <!-- Structure Breakdown Section -->
-      <section class="structure-section">
-        <!-- Centered Arrow & Header -->
-        <header class="structure-header">
-          <span class="down-arrow" aria-hidden="true">&darr;</span>
-          <h2>Structure of a Strong Prompt</h2>
-        </header>
+      <!-- Structure of a Strong Prompt (Grid Section) -->
+      <section class="prompt-structure-section">
+        <h2>Structure of a Strong Prompt</h2>
 
-        <!-- Clean 2x2 Grid Layout -->
         <div class="structure-grid">
-          <!-- Context -->
+          <!-- Card 1: Context -->
           <article class="structure-card">
-            <header class="card-header">
-              <span class="dot dot-green" aria-hidden="true"></span>
+            <div class="card-header-tag">
+              <span class="dot green-dot"></span>
               <h3>CONTEXT</h3>
-            </header>
-            <blockquote class="sample-quote">
-              "I am an environmental science student"
-            </blockquote>
-            <p class="card-description">
-              <strong>Your background or story</strong> &rarr; tells AI who you
-              are and sets the depth level.
+            </div>
+            <div class="mini-snippet-preview">
+              <code>"I am an environmental science student"</code>
+            </div>
+            <p>
+              <strong>Your background or story</strong> — tells AI who you are
+              and sets the depth level.
             </p>
           </article>
 
-          <!-- Task -->
+          <!-- Card 2: Task -->
           <article class="structure-card">
-            <header class="card-header">
-              <span class="dot dot-blue" aria-hidden="true"></span>
+            <div class="card-header-tag">
+              <span class="dot blue-dot"></span>
               <h3>TASK</h3>
-            </header>
-            <blockquote class="sample-quote">
-              "Explain the main causes of..."
-            </blockquote>
-            <p class="card-description">
-              <strong>The core job</strong> &rarr; basically the same from what
-              you read in your assignment guidelines.
+            </div>
+            <div class="mini-snippet-preview">
+              <code>"Explain the main causes of..."</code>
+            </div>
+            <p>
+              <strong>The core job</strong> — basically the same from what you
+              read in your assignment guidelines.
             </p>
           </article>
 
-          <!-- Format -->
+          <!-- Card 3: Format -->
           <article class="structure-card">
-            <header class="card-header">
-              <span class="dot dot-purple" aria-hidden="true"></span>
+            <div class="card-header-tag">
+              <span class="dot purple-dot"></span>
               <h3>FORMAT</h3>
-            </header>
-            <blockquote class="sample-quote">
-              "in 5 short bullet points"
-            </blockquote>
-            <p class="card-description">
-              <strong>The visual look</strong> &rarr; how the answer should be
+            </div>
+            <div class="mini-snippet-preview">
+              <code>"in 5 short bullet points"</code>
+            </div>
+            <p>
+              <strong>The visual look</strong> — how the answer should be
               structured (bullets, essay, table, etc.).
             </p>
           </article>
 
-          <!-- Requirement -->
+          <!-- Card 4: Requirement -->
           <article class="structure-card">
-            <header class="card-header">
-              <span class="dot dot-orange" aria-hidden="true"></span>
+            <div class="card-header-tag">
+              <span class="dot orange-dot"></span>
               <h3>REQUIREMENT</h3>
-            </header>
-            <blockquote class="sample-quote">
-              "using statistics from..."
-            </blockquote>
-            <p class="card-description">
-              <strong>Specific expectations</strong> &rarr; raw ideas or
-              constraints you want AI to consider.
+            </div>
+            <div class="mini-snippet-preview">
+              <code>"using statistics from..."</code>
+            </div>
+            <p>
+              <strong>Specific expectations</strong> — raw ideas or constraints
+              you want AI to consider.
             </p>
           </article>
         </div>
       </section>
 
-      <!-- CTA Next Step Section -->
+      <!-- CTA Next Step -->
       <section class="cta-next-step">
         <p class="cta-subtext">
           You asked. AI answered. Can you trust the answer?

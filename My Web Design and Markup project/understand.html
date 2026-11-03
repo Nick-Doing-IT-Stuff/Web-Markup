@@ -6,18 +6,38 @@
     <title>01. Understand Task — AI for Better Learning</title>
     <meta
       name="description"
-      content="Break down your assignment before asking AI for help."
+      content="Break down your assignment into 5 core components before asking AI for assistance."
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Header & Navigation -->
     <header class="site-header">
       <nav class="main-nav" aria-label="Main Navigation">
-        <p class="logo-title">
-          <a href="index.html">AI for Better Learning</a>
-        </p>
+        <a href="index.html" class="logo-container">
+          <svg
+            class="logo-icon"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2a10 10 0 0 1 7.54 16.54M2 12h20M12 22a10 10 0 0 1-7.54-16.54"
+            />
+            <path d="M6 12h12" stroke-dasharray="2 2" />
+          </svg>
+          <span class="logo-text">AI for Better Learning</span>
+        </a>
+
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li>
@@ -33,9 +53,11 @@
       </nav>
     </header>
 
+    <!-- Main Content -->
     <main id="main-content" class="understand-page">
+      <!-- Hero Header -->
       <section class="hero-step">
-        <p class="step-tag">STEP 01</p>
+        <p class="step-tag-blue">STEP 01</p>
         <h1>Understand the Task</h1>
         <p class="hero-lead">
           Before asking AI for help, use your brain to break down what you
@@ -43,120 +65,97 @@
         </p>
       </section>
 
-      <!-- 1. Cascade Steps with Arrows -->
-      <section class="method-section">
+      <!-- 5 Easy Steps Breakdown (Clean List with restored colors) -->
+      <section class="steps-editorial-section">
         <h2>Let's break it down in 5 easy steps:</h2>
 
-        <ol class="steps-cascade">
-          <li class="step-item step-1">
-            <span class="step-num">1.</span> What do I need to deliver?
+        <ul class="steps-clean-list">
+          <li class="step-clean-item s-1">
+            <span class="step-badge">01</span>
+            <span class="step-text">What do I need to deliver?</span>
           </li>
-          <li class="step-item step-2">
-            <span class="step-arrow" aria-hidden="true">&#8627;</span>
-            <span class="step-num">2.</span> What is the topic of my assignment?
+          <li class="step-clean-item s-2">
+            <span class="step-badge">02</span>
+            <span class="step-text">What is the topic of my assignment?</span>
           </li>
-          <li class="step-item step-3">
-            <span class="step-arrow" aria-hidden="true">&#8627;</span>
-            <span class="step-num">3.</span> What are the requirements?
+          <li class="step-clean-item s-3">
+            <span class="step-badge">03</span>
+            <span class="step-text">What are the requirements?</span>
           </li>
-          <li class="step-item step-4">
-            <span class="step-arrow" aria-hidden="true">&#8627;</span>
-            <span class="step-num">4.</span> Who is it for?
+          <li class="step-clean-item s-4">
+            <span class="step-badge">04</span>
+            <span class="step-text">Who is it for?</span>
           </li>
-          <li class="step-item step-5">
-            <span class="step-arrow" aria-hidden="true">&#8627;</span>
-            <span class="step-num">5.</span> What can AI actually help me with?
+          <li class="step-clean-item s-5">
+            <span class="step-badge">05</span>
+            <span class="step-text">What can AI actually help me with?</span>
           </li>
-        </ol>
+        </ul>
       </section>
 
-      <!-- 2. Real Assignment Example -->
-      <section class="example-section">
-        <article class="example-card">
-          <header class="example-header">
-            <p class="protip-text">
-              Pro tip: this methodology works for any project: essays, coding
-              tasks, research or math problems.
-            </p>
-            <p class="example-title">Real Assignment Example:</p>
-          </header>
+      <!-- Real Assignment Example Card -->
+      <section class="example-box-section">
+        <article class="example-card-editorial">
+          <p class="pro-tip">
+            Pro tip: this methodology works for essays, coding tasks, research
+            or math problems.
+          </p>
+          <h3 class="example-title">Real Assignment Example:</h3>
 
-          <blockquote class="assignment-text">
-            Write a <mark class="hl-purple">2-page analytical essay</mark> on
-            the
+          <p class="example-text">
+            Write <mark class="hl-pink">a 2-page analytical essay</mark> on the
             <mark class="hl-blue"
               >impact of automations on the labour force</mark
-            >. The text must include at
+            >. The text must include
             <mark class="hl-green"
-              >least 3 arguments with real life examples</mark
+              >at least 3 arguments with real life examples</mark
             >
             and be targeted as
             <mark class="hl-orange">economics students</mark>.
-          </blockquote>
+          </p>
         </article>
       </section>
 
-      <!-- 3. Task Readiness Checklist -->
+      <!-- Task Readiness Checklist with Custom Checkboxes & Bold Active State -->
       <section class="checklist-section">
-        <h2>Task Readiness Checklist</h2>
+        <article class="checklist-card">
+          <h2>Task Readiness Checklist</h2>
 
-        <form
-          class="checklist-form"
-          action="#"
-          method="post"
-          onsubmit="return false;"
-        >
-          <fieldset class="checklist-fieldset">
-            <legend class="sr-only">
-              Check items before moving to the next step
-            </legend>
-
-            <label class="toggle-control">
-              <input
-                type="checkbox"
-                name="check_deliverable"
-                class="toggle-input"
-              />
-              <span class="toggle-switch"></span>
-              <span class="toggle-label">I know what I need to do</span>
+          <div class="checklist-items">
+            <label class="checkbox-row">
+              <input type="checkbox" class="checkbox-input" />
+              <span class="custom-checkbox"></span>
+              <span class="checkbox-text">I know what I need to do</span>
             </label>
 
-            <label class="toggle-control">
-              <input
-                type="checkbox"
-                name="check_requirements"
-                class="toggle-input"
-              />
-              <span class="toggle-switch"></span>
-              <span class="toggle-label"
+            <label class="checkbox-row">
+              <input type="checkbox" class="checkbox-input" />
+              <span class="custom-checkbox"></span>
+              <span class="checkbox-text"
                 >I know the key requirements of the assignment</span
               >
             </label>
 
-            <label class="toggle-control">
-              <input type="checkbox" name="check_role" class="toggle-input" />
-              <span class="toggle-switch"></span>
-              <span class="toggle-label"
+            <label class="checkbox-row">
+              <input type="checkbox" class="checkbox-input" />
+              <span class="custom-checkbox"></span>
+              <span class="checkbox-text"
                 >I know my role and who I'm doing it for</span
               >
             </label>
 
-            <label class="toggle-control">
-              <input
-                type="checkbox"
-                name="check_ai_help"
-                class="toggle-input"
-              />
-              <span class="toggle-switch"></span>
-              <span class="toggle-label"
+            <label class="checkbox-row">
+              <input type="checkbox" class="checkbox-input" />
+              <span class="custom-checkbox"></span>
+              <span class="checkbox-text"
                 >I know what I actually need AI's help with</span
               >
             </label>
-          </fieldset>
-        </form>
+          </div>
+        </article>
       </section>
 
-      <!-- 4. Next Step Navigation -->
+      <!-- CTA Next Step -->
       <section class="cta-next-step">
         <p class="cta-subtext">Know what you need. Now ask for it.</p>
         <p class="cta-action">
@@ -167,6 +166,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
       <p>&copy; 2026 AI for Better Learning Project. All rights reserved.</p>
     </footer>

@@ -17,9 +17,28 @@
     <!-- Header & Navigation -->
     <header class="site-header">
       <nav class="main-nav" aria-label="Main Navigation">
-        <p class="logo-title">
-          <a href="index.html">AI for Better Learning</a>
-        </p>
+        <!-- Logo with Brain + Bridge concept -->
+        <a href="index.html" class="logo-container">
+          <svg
+            class="logo-icon"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2a10 10 0 0 1 7.54 16.54M2 12h20M12 22a10 10 0 0 1-7.54-16.54"
+            />
+            <path d="M6 12h12" stroke-dasharray="2 2" />
+          </svg>
+          <span class="logo-text">AI for Better Learning</span>
+        </a>
+
         <ul class="nav-links">
           <li>
             <a href="index.html" class="active" aria-current="page">Home</a>
@@ -35,7 +54,7 @@
 
     <!-- Main Content -->
     <main id="main-content" class="home-page">
-      <!-- Top Hero Section (Centered Callout) -->
+      <!-- Top Hero Section -->
       <section class="hero-home-centered">
         <h1>AI FOR BETTER LEARNING</h1>
         <p class="hero-subtitle">Use AI to learn better. Not to think less.</p>
@@ -48,19 +67,24 @@
         </p>
       </section>
 
-      <!-- Prompts Grid Showcase Section -->
+      <!-- Prompts Showcase Section (Strictly 3 Columns, 6 Cards) -->
       <section class="prompts-showcase-section">
         <h2 class="showcase-title">
           Why are some artificial intelligence answers better than others?
         </h2>
 
         <div class="prompts-grid-horizontal">
-          <!-- Row 1 / Card 1 -->
+          <!-- Card 1 -->
           <article class="prompt-card">
             <header class="prompt-header">
-              <code>&gt; Write an essay about Ecology</code>
+              <code
+                >&gt; Write an essay about ecology and urban green spaces.</code
+              >
             </header>
-            <p>Generic text without specific facts or citations...</p>
+            <p>
+              Produces a generic text draft lacking specific academic citations
+              or recent data.
+            </p>
             <footer class="prompt-footer">
               <span class="emoji-badge" role="img" aria-label="Robot face"
                 >🤖</span
@@ -68,12 +92,15 @@
             </footer>
           </article>
 
-          <!-- Row 1 / Card 2 -->
+          <!-- Card 2 -->
           <article class="prompt-card">
             <header class="prompt-header">
-              <code>&gt; Explain quantum mechanics like I'm 10 years old</code>
+              <code>&gt; Explain quantum mechanics like I'm 10 years old.</code>
             </header>
-            <p>Engaging summary with relatable real-world analogies...</p>
+            <p>
+              Delivers an engaging summary using clear, relatable real-world
+              analogies.
+            </p>
             <footer class="prompt-footer">
               <span
                 class="emoji-badge"
@@ -84,13 +111,13 @@
             </footer>
           </article>
 
-          <!-- Row 1 / Card 3 -->
+          <!-- Card 3 -->
           <article class="prompt-card">
             <header class="prompt-header">
               <code>&gt; Review my C# code for performance bottlenecks.</code>
             </header>
             <p>
-              Here the detailed analysis highlighting memory efficiency tips...
+              Provides a detailed analysis highlighting memory efficiency tips.
             </p>
             <footer class="prompt-footer">
               <span
@@ -102,29 +129,33 @@
             </footer>
           </article>
 
-          <!-- Row 1 / Card 4 -->
+          <!-- Card 4 -->
           <article class="prompt-card">
             <header class="prompt-header">
-              <code>&gt; Write my conclusion for me</code>
+              <code>&gt; Write a conclusion based on my notes.</code>
             </header>
-            <p>Here is a polished conclusion from your research.</p>
+            <p>
+              Generates a generalized summary that misses your actual research
+              findings.
+            </p>
             <footer class="prompt-footer">
               <span
                 class="emoji-badge"
                 role="img"
                 aria-label="Nerd face with idea lightbulb"
-                >💡🤓</span
+                >💡</span
               >
             </footer>
           </article>
 
-          <!-- Row 2 / Card 1 -->
+          <!-- Card 5 -->
           <article class="prompt-card">
             <header class="prompt-header">
-              <code>&gt; Solve math homework</code>
+              <code>&gt; Solve this algebra problem with steps.</code>
             </header>
             <p>
-              Inaccurate answer without step-by-step solving explanations...
+              Gives a final number without logic, making it hard to check or
+              learn.
             </p>
             <footer class="prompt-footer">
               <span
@@ -136,34 +167,21 @@
             </footer>
           </article>
 
-          <!-- Row 2 / Card 2 -->
+          <!-- Card 6 -->
           <article class="prompt-card">
             <header class="prompt-header">
-              <code>&gt; Give me sources for this topic</code>
+              <code>&gt; Create authentic logo for a sauce shop.</code>
             </header>
-            <p>Provides several convincing-looking sources...</p>
+            <p>
+              Produces a creative visual concept that matches the requested
+              product vibe.
+            </p>
             <footer class="prompt-footer">
               <span
                 class="emoji-badge"
                 role="img"
                 aria-label="Exploding head face"
-                >🤯</span
-              >
-            </footer>
-          </article>
-
-          <!-- Row 2 / Card 3 -->
-          <article class="prompt-card">
-            <header class="prompt-header">
-              <code>&gt; Create authentic logo for sauce specialised shop</code>
-            </header>
-            <p>
-              Creates sauces that look like they could be from a movie, not a
-              logo picture...
-            </p>
-            <footer class="prompt-footer">
-              <span class="emoji-badge" role="img" aria-label="Sick face"
-                >🤢</span
+                >🎨</span
               >
             </footer>
           </article>
